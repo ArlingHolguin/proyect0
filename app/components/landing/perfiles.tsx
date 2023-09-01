@@ -1,47 +1,56 @@
-import Image from "next/image";
+'use client'
+import Link from "next/link";
+import {  WhatsAppOutlined } from '@ant-design/icons';
+import { useEffect, useState } from "react";
 
 export default function Perfiles() {
+
+  const [whatsAppLink, setWhatsAppLink] = useState<string>('');
+
+  useEffect(() => {
+    if (process.env.NEXT_PUBLIC_LINK_WHATSAPP) {
+      setWhatsAppLink(process.env.NEXT_PUBLIC_LINK_WHATSAPP);
+    }
+  }, []);
+
   const data = {
-      img: "/img/landing/perfiles/bgCifras.webp",
-      title: "Los números nos respaldan",
+      img: "/img/landing/fondo_amor.webp",
+      title: "Maestros A Tu Servicio",
       cardItems:[
         {
-          cant: "300+",
+          cant: "3000+",
           text: "Clientes satisfechos"
         },
         {
-          cant: "1200+",
-          text: "Transacciones / día"
+          cant: "120+",
+          text: "Trabajos / día"
         },
         {
-          cant: "10+",
-          text: "Años en el mercado"
+          cant: "15+",
+          text: "Años de experiencia"
         }
       ],
-      titleSub: "Gestiona tus perfiles de usuario según el alcance",
-      description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet",
+      titleSub: "Escríbenos Ahora la consulta incial es gratis",
+      description: "Encuentra El Amor Perdido Y Fortalece Tus Vínculos Emocionales. Descubre La Formas Que Tenemos Par Aayudarte. El Amor Verdadero Está A Tu Alcance.",
       items:[
         {
-          icon: "/img/landing/perfiles/icons/administrador.svg",
-          title: "Administrador",
-          desc: "Este perfil tiene acceso a todos los módulos existente en la plataforma"
+          title: "Amarres",
+          desc: "¡Recupera El Amor Perdido! Este Poderoso Amarre De Amor Te Ayudará A Reconstruir Los Lazos Emocionales Y Revivir La Pasión En Tu Relación"
         },
         {
-          icon: "/img/landing/perfiles/icons/aprobador.svg",
-          title: "Aprobador",
-          desc: "Es el encargado de aprobar o rechazar las solicitudes asignadas"
+          title: "Feromonas",
+          desc: "¡Descubre El Secreto De La Atracción!"
         },
         {
-          icon: "/img/landing/perfiles/icons/viajero.svg",
-          title: "Viajero",
-          desc: "Colaborador que tiene viajes planeados en la plataforma"
+          title: "Maestros a tu servicio",
+          desc: "Somos Un Equipo De Maestros  Expertos En Amarres De Amor Con Años De Experiencia. Nuestro Objetivo Es Ayudarte A Encontrar La Felicidad Y El Amor Duradero Mediante Nuestras Técnicas Y Rituales."
         },
 
       ]
     
   }
     return (
-      <section id="perfiles" className="w-full h-auto">
+      <section id="nosotros" className="w-full h-auto">
         {/* cifras  */}
          <div className="pb-20" style={{backgroundImage: `url(${data.img})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
           <div className="flex flex-col justify-center items-center px-4 md:px-0">
@@ -69,12 +78,18 @@ export default function Perfiles() {
           <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row px-8 gap-12">
                   <div className="w-full md:w-1/2">
                     <h1 className="text-[24px] md:text-[40px] text-[#A2C217] font-bold leading-9 md:w-[400px] mb-6">{data.titleSub}</h1>
-                    <p className="w-auto md:w-[450px] font-medium">{data.description}</p>
+                    <p className="w-auto md:w-[450px] font-medium mb-8">{data.description}</p>
+                    <Link className="mt-8" href={whatsAppLink}>
+                      <div className="flex justify-center items-center gap-2 bg-[#5A1482] hover:bg-[#380057] text-white text-[16px] w-[216px] h-[48px] rounded">
+                        <WhatsAppOutlined className='text-white text-xl mb-1' />
+                        <span> Consulta Inicial</span>
+                      </div>
+                    </Link>
                   </div>
                   <div className="w-full flex flex-col gap-4 md:gap-3 md:w-1/2 ">
                     {data.items.map((item, index) =>(
                       <div key={item.title+index} className="flex flex-col md:flex-row items-center gap-8 p-4 md:p-0 rounded-lg md:rounded-[0px] shadow-lg md:shadow-none bg-white md:bg-transparent">
-                          <Image src={item.icon} width={62} height={62} alt={item.icon} className="object-cover object-center"/>
+                          {/* <Image src={item.icon} width={62} height={62} alt={item.icon} className="object-cover object-center"/> */}
                         <div className="flex flex-col items-center md:items-start mb-4">
                           <div className="font-bold text-[#5A1482] text-[25px]">{item.title}</div>
                           <p className="text-[#323237] text-md text-center md:text-left">{item.desc}</p>
