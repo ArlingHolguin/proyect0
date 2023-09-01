@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Amarres de amor',
   description: 'Somos Un Equipo De Maestros  Expertos En Amarres De Amor Con Años De Experiencia. Nuestro Objetivo Es Ayudarte A Encontrar La Felicidad Y El Amor Duradero Mediante Nuestras Técnicas Y Rituales.',
-  
+
 }
 
 export default function RootLayout({
@@ -34,7 +34,6 @@ export default function RootLayout({
           </script>
         `,
       }}>
-
       </head>
       <body className={inter.className}>{children}</body>
     </html>
