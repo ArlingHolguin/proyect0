@@ -32,7 +32,7 @@ export default function Inicio() {
         </div>
         {/* botones desktop  */}
         <div className="hidden md:flex items-center gap-5 md:mt-[55px]">
-          <Link href={whatsAppLink}  passHref target='_blank'>
+          <Link href={'https://api.whatsapp.com/send?phone=5219862170861&text=Hola%20quiero%20mi%20consulta%20inicial%2C%20deseo%20iniciar%20el%20cambio'}  passHref target='_blank'>
             <div className="flex justify-center items-center gap-2 bg-[#5A1482] hover:bg-[#380057] text-white text-[16px] w-[216px] h-[48px] rounded">
             <WhatsAppOutlined className='text-white text-xl mb-1' /> 
             <span>Escríbenos ahora</span>
@@ -42,7 +42,7 @@ export default function Inicio() {
       </div>
       {/* register mobile  */}
       <div className="w-full flex md:hidden justify-center">        
-        <Link href={whatsAppLink}>
+        <Link href={'https://api.whatsapp.com/send?phone=5219862170861&text=Hola%20quiero%20mi%20consulta%20inicial%2C%20deseo%20iniciar%20el%20cambio'}>
           <div className="flex justify-center items-center gap-2 bg-[#5A1482] hover:bg-[#380057] text-white text-[16px] w-[216px] h-[48px] rounded">
           <WhatsAppOutlined className='text-white text-xl mb-1' /> 
             <span> Escríbenos ahora</span>

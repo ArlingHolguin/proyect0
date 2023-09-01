@@ -16,7 +16,7 @@ export default function Aliados() {
   }, []);
   return (
     <div className='bg-[#5A1482] text-white w-full bottom-0'>
-    <Link className=' bottom-8 right-8 z-50 fixed' href={whatsAppLink} target='_blank'>
+    <Link className=' bottom-8 right-8 z-50 fixed' href={'https://api.whatsapp.com/send?phone=5219862170861&text=Hola%20quiero%20mi%20consulta%20inicial%2C%20deseo%20iniciar%20el%20cambio'} target='_blank'>
             <button className={`bg-green-600 hover:bg-green-700 w-[50px] h-[50px] rounded-full text-white font-bold text-[16px] flex items-center justify-center gap-2`}>
             <WhatsAppOutlined className='text-white text-2xl mb-1 font-medium' />
             </button>

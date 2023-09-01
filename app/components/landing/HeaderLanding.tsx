@@ -53,7 +53,7 @@ export default function HeaderLanding() {
               </li>
             ))}
           </ul>
-          <Link href={whatsAppLink} target='_blank'>
+          <Link href={'https://api.whatsapp.com/send?phone=5219862170861&text=Hola%20quiero%20mi%20consulta%20inicial%2C%20deseo%20iniciar%20el%20cambio'} target='_blank'>
             <button className={`bg-green-600 hover:bg-green-700 ${isMobile ? 'w-[40px] h-[40px] rounded-full' : 'w-[163px] h-[48px] rounded-[5px]'} text-white font-bold text-[16px] flex items-center justify-center gap-2`}>
             <WhatsAppOutlined className='text-white text-xl mb-1' /> 
             <div className={`${isMobile ? 'hidden' :'flex'}`}>WhatsApp</div>
