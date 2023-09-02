@@ -58,7 +58,7 @@ export default function Servicios() {
 
             <div className="w-full flex items-center justify-center px-2 border">
               <div className="flex flex-col items-center my-6">
-                    <Link href={'https://api.whatsapp.com/send?phone=5219862170861&text=Hola%20quiero%20mi%20consulta%20inicial%2C%20deseo%20iniciar%20el%20cambio'}>
+                    <Link target="_blank" href={'https://api.whatsapp.com/send?phone=5219862170861&text=Hola%20quiero%20mi%20consulta%20inicial%2C%20deseo%20iniciar%20el%20cambio'}>
                       <div className="flex justify-center items-center gap-2 bg-[#5A1482] hover:bg-[#380057] text-white text-[16px] w-[216px] h-[48px] rounded">
                         <WhatsAppOutlined className='text-white text-xl mb-1' />
                         <span> Saber más</span>

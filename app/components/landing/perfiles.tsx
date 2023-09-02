@@ -79,7 +79,7 @@ export default function Perfiles() {
                   <div className="w-full md:w-1/2">
                     <h1 className="text-[24px] md:text-[40px] text-[#A2C217] font-bold leading-9 md:w-[400px] mb-6">{data.titleSub}</h1>
                     <p className="w-auto md:w-[450px] font-medium mb-8">{data.description}</p>
-                    <Link className="mt-8" href={'https://api.whatsapp.com/send?phone=5219862170861&text=Hola%20quiero%20mi%20consulta%20inicial%2C%20deseo%20iniciar%20el%20cambio'}>
+                    <Link className="mt-8" target="_blank" href={'https://api.whatsapp.com/send?phone=5219862170861&text=Hola%20quiero%20mi%20consulta%20inicial%2C%20deseo%20iniciar%20el%20cambio'}>
                       <div className="flex justify-center items-center gap-2 bg-[#5A1482] hover:bg-[#380057] text-white text-[16px] w-[216px] h-[48px] rounded">
                         <WhatsAppOutlined className='text-white text-xl mb-1' />
                         <span> Consulta Inicial</span>
