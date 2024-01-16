@@ -1,0 +1,7 @@
+{
+    "dotenv.enableAutocloaking": false,
+    "files.associations": {
+        "*.css": "tailwindcss"
+        }
+   
+}

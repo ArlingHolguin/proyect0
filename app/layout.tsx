@@ -30,12 +30,14 @@ export default function RootLayout({
               j.async = true;
               j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
               f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_TAG_MANAGER}');
+            })(window,document,'script','dataLayer','GTM-MBD6GFP');
           </script>
         `,
       }}>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   )
 }
